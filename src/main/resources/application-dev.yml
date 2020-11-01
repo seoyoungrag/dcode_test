@@ -21,6 +21,9 @@ logging:
     org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver: debug
     org.hibernate.type.descriptor.sql.BasicExtractor: debug
 spring:
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
   devtools:
     add-properties: false
   profiles: dev
