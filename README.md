@@ -19,7 +19,7 @@
 
 ### 3. 애플리케이션 설계
 #### 3-1. 데이터 모델링과 애플리케이션 기본 셋팅 기반으로 class diagram 작성(visual paradigm)
-##### 3-1-2. domain driven develop 패턴으로 작성하려고 했으나, 엔터티에 담을 만한 비즈니스 로직이 없음. 
+##### 3-1-2. domain driven develop 패턴으로 goodsSale와 상품판매명과 상품판매가격생성 로직을 추가, goodsSaleShape에는 연관관계편의메소드만 추가됨.
 ##### 3-1-3. 마찬가지로 transaction script로 뺄만한 로직이 별로 없어 모델-컨트롤러-리파지터리 레이어로 설계
 #### 3-2. 테스트 코드 때문에 명명이 안맞을 수는 있으나, 일단 정리가능한 정도면 우선순위 낮춰서 진행하자.
 
@@ -34,10 +34,14 @@
 #### 5-3. 언급되지 않은 재고 관리, 사용자 정보 등에 대한 확장 작성
 
 ### 데이터 모델링 문서
-![data_standard_1](https://user-images.githubusercontent.com/9579667/97800993-ef39d800-1c7c-11eb-8520-563c8f229627.jpg)
-![data_standard_2](https://user-images.githubusercontent.com/9579667/97800994-f06b0500-1c7c-11eb-92ce-32c649f53541.jpg)
-![data_standard_3](https://user-images.githubusercontent.com/9579667/97800996-f1039b80-1c7c-11eb-9c6c-9078bd57a2d2.jpg)
-![data_standard_4](https://user-images.githubusercontent.com/9579667/97800997-f1039b80-1c7c-11eb-8d81-9f3f5d6298cb.jpg)
-![logical_erd](https://user-images.githubusercontent.com/9579667/97800999-f19c3200-1c7c-11eb-975e-9f6b371101fe.png)
-![physical_erd](https://user-images.githubusercontent.com/9579667/97801001-f19c3200-1c7c-11eb-8373-cfbdae68ed2d.png)
+![data_standard_1](https://user-images.githubusercontent.com/9579667/97805287-87918600-1c98-11eb-8704-da09d40caad0.jpg)
+![data_standard_2](https://user-images.githubusercontent.com/9579667/97805290-895b4980-1c98-11eb-81de-3e3ae908d615.jpg)
+![data_standard_3](https://user-images.githubusercontent.com/9579667/97805291-895b4980-1c98-11eb-95c7-3dec9590b1fc.jpg)
+![data_standard_4](https://user-images.githubusercontent.com/9579667/97805292-89f3e000-1c98-11eb-97ac-2e77f736982d.jpg)
+![logical_erd](https://user-images.githubusercontent.com/9579667/97805293-89f3e000-1c98-11eb-9216-075c2b000db7.png)
+![physical_erd](https://user-images.githubusercontent.com/9579667/97805294-8a8c7680-1c98-11eb-9e97-da5bb1831f2a.png)
+
+### 클래스다이어그램 문서
+![classdiagram](https://user-images.githubusercontent.com/9579667/97805296-8b250d00-1c98-11eb-85de-1c33de218327.jpg)
+
 
