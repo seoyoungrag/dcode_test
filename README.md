@@ -47,8 +47,8 @@
 ![data_standard_2](https://user-images.githubusercontent.com/9579667/97805290-895b4980-1c98-11eb-81de-3e3ae908d615.jpg)
 ![data_standard_3](https://user-images.githubusercontent.com/9579667/97805291-895b4980-1c98-11eb-95c7-3dec9590b1fc.jpg)
 ![data_standard_4](https://user-images.githubusercontent.com/9579667/97805292-89f3e000-1c98-11eb-97ac-2e77f736982d.jpg)
-![logical_erd](https://user-images.githubusercontent.com/9579667/97805293-89f3e000-1c98-11eb-9216-075c2b000db7.png)
-![physical_erd](https://user-images.githubusercontent.com/9579667/97805294-8a8c7680-1c98-11eb-9e97-da5bb1831f2a.png)
+![logical_erd](https://user-images.githubusercontent.com/9579667/97808888-e103b000-1cac-11eb-96d5-62b1530ea869.png)
+![physical_erd](https://user-images.githubusercontent.com/9579667/97808890-e19c4680-1cac-11eb-8df0-552814ea6d28.png)
 
 ### 클래스다이어그램 문서
 ![classdiagram](https://user-images.githubusercontent.com/9579667/97805775-7c8c2500-1c9b-11eb-84df-db02d52107d9.jpg)
