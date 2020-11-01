@@ -16,16 +16,16 @@ import java.util.Objects;
 public class Goods extends CommonDateEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "GOODS_SEQ")
+    @Column(name = "GOODS_SEQ", length = 11, nullable = false)
     private Integer goodsSeq;
 
-    @Column(name = "GOODS_PRICE")
+    @Column(name = "GOODS_PRICE", length = 11, nullable = false)
     private Integer goodsPrice;
 
-    @Column(name = "GOODS_NM")
+    @Column(name = "GOODS_NM", length = 200, nullable = false)
     private String goodsNm;
 
-    @Column(name = "GOODS_CTGRY")
+    @Column(name = "GOODS_CTGRY", length = 4, nullable = false)
     @Convert(converter = GoodsCtgryConverter.class)
     private GoodsCtgry goodsCtgry;
 

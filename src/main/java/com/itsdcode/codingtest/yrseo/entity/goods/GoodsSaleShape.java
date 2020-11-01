@@ -22,11 +22,11 @@ public class GoodsSaleShape extends CommonDateEntity {
     @JoinColumn(name = "GOODS_SALE_SEQ", referencedColumnName = "GOODS_SALE_SEQ", nullable = false)
     private GoodsSale goodsSale;
 
-    @Column(name = "MASTER_GOODS_YN")
+    @Column(name = "MASTER_GOODS_YN", length = 1, nullable = false)
     @Convert(converter = MasterGoodsYnConverter.class)
     private MasterGoodsYn masterGoodsYn;
 
-    @Column(name = "DISCNT_RT")
+    @Column(name = "DISCNT_RT", length = 3, nullable = false)
     private Integer discntRt;
 
     public GoodsSaleShape() {

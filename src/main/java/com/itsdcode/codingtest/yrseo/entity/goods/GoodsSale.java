@@ -19,17 +19,17 @@ public class GoodsSale extends CommonDateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "GOODS_SALE_SEQ")
+    @Column(name = "GOODS_SALE_SEQ", length = 11, nullable = false)
     private Integer goodsSaleSeq;
 
-    @Column(name = "GOODS_SALE_SHAPE_CL")
+    @Column(name = "GOODS_SALE_SHAPE_CL", length = 4, nullable = false)
     @Convert(converter = GoodsSaleShapeClConverter.class)
     private GoodsSaleShapeCl goodsSaleShapeCl;
 
-    @Column(name = "GOODS_SALE_NM")
+    @Column(name = "GOODS_SALE_NM", length = 200, nullable = false)
     private String goodsSaleNm;
 
-    @Column(name = "GOODS_SALE_PRICE")
+    @Column(name = "GOODS_SALE_PRICE", length = 11, nullable = false)
     private Integer goodsSalePrice;
 
     @OneToMany(mappedBy = "goods")
