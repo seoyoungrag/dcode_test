@@ -1,7 +1,7 @@
 package com.itsdcode.codingtest.yrseo.repository.goods;
 
-import com.itsdcode.codingtest.yrseo.dto.GoodsConditionForDCODE;
-import com.itsdcode.codingtest.yrseo.dto.GoodsDTOForDCODE;
+import com.itsdcode.codingtest.yrseo.dto.GoodsCondition;
+import com.itsdcode.codingtest.yrseo.dto.GoodsDTO;
 import com.itsdcode.codingtest.yrseo.entity.goods.GoodsSaleShape;
 import com.itsdcode.codingtest.yrseo.enums.MasterGoodsYn;
 import com.itsdcode.codingtest.yrseo.repository.Querydsl4RepositorySupport;
@@ -32,8 +32,8 @@ public class QGoodsSaleShapeRepository extends Querydsl4RepositorySupport {
         return selectFrom(goodsSaleShape).fetch();
     }
 
-    public List<GoodsDTOForDCODE> search(GoodsConditionForDCODE condition){
-        JPAQuery<GoodsDTOForDCODE> query = select(Projections.constructor(GoodsDTOForDCODE.class,
+    public List<GoodsDTO> search(GoodsCondition condition){
+        JPAQuery<GoodsDTO> query = select(Projections.constructor(GoodsDTO.class,
                 goodsSaleShape.goodsSale.goodsSaleSeq,
                 goodsSaleShape.goodsSale.goodsSalePrice,
                 goodsSaleShape.goodsSale.goodsSaleNm,

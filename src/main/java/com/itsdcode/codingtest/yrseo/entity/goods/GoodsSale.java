@@ -109,7 +109,6 @@ public class GoodsSale extends CommonDateEntity {
         for(GoodsSaleShape gs : this.goodsSaleShapes){
             if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.BUNDLE)){
                 goodsSalePrice += (gs.getGoods().getGoodsPrice()-(gs.getGoods().getGoodsPrice()*(gs.getDiscntRt()/100)));
-                System.out.println(goodsSalePrice);
             }else if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.ONE_PLUS_ONE)){
                 if(gs.getMasterGoodsYn().equals(MasterGoodsYn.YES)) {
                     goodsSalePrice = gs.getGoods().getGoodsPrice()-(gs.getGoods().getGoodsPrice()*(gs.getDiscntRt()/100));

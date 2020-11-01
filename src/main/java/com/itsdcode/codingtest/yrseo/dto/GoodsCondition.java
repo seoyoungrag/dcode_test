@@ -4,7 +4,7 @@ import com.itsdcode.codingtest.yrseo.enums.MasterGoodsYn;
 import lombok.Data;
 
 @Data
-public class GoodsConditionForDCODE {
+public class GoodsCondition {
     private Integer goodsSaleSeq;
     private MasterGoodsYn masterGoodsYn;
 }

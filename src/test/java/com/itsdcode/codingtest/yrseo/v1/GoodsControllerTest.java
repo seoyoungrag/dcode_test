@@ -1,6 +1,6 @@
 package com.itsdcode.codingtest.yrseo.v1;
 
-import com.itsdcode.codingtest.yrseo.controller.v1.GoodsController;
+import com.itsdcode.codingtest.yrseo.controller.v1.GoodsSaleController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,21 +18,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 class GoodsControllerTest {
 
     @Autowired
-    private GoodsController goodsController;
+    private GoodsSaleController goodsSaleController;
 
     private MockMvc mockMvc;
 
     @Test
     public void findAll() {
-        System.out.println(goodsController.findAll());
-        assertThat(goodsController.findAll()).isNotNull();
+        System.out.println(goodsSaleController.findAll());
+        assertThat(goodsSaleController.findAll()).isNotNull();
     }
 
     @Test
     public void mockMvcFindAll() throws Exception {
-        mockMvc = MockMvcBuilders.standaloneSetup(goodsController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(goodsSaleController).build();
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/v1/goods/test"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/v1/goodsSale"))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
