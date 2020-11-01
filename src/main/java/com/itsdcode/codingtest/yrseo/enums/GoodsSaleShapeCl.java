@@ -7,10 +7,10 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum GoodsSaleShapeCl implements BaseEnumCode<String> {
 
-    ONE_PLUS_ONE("OPO"),
-    BUNDLE("BUN"),
-    OPTION("OPT"),
-    NULL("")//entity는 not null 이지만 DTO에서 사용하기 위해 NULL을 지정한다.
+    ONE_PLUS_ONE("OPO"),//원플러스원
+    BUNDLE("BUN"),//묶음상품
+    OPTION("OPT"),//옵션상품
+    ONE("ONE")//단품상품
     ;
 
     private final String value;

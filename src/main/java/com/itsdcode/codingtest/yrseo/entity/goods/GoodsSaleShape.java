@@ -103,6 +103,8 @@ public class GoodsSaleShape extends CommonDateEntity {
         }
         this.goodsSale = goodsSale;
         goodsSale.getGoodsSaleShapes().add(this);
+        goodsSale.makeGoodsSaleNm();
+        goodsSale.makePrice();
     }
 
 

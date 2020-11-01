@@ -1,5 +1,6 @@
 package com.itsdcode.codingtest.yrseo.common.advice;
 
+import com.itsdcode.codingtest.yrseo.common.advice.exception.CResourceNotExistException;
 import com.itsdcode.codingtest.yrseo.common.response.CommonResult;
 import com.itsdcode.codingtest.yrseo.common.response.ResponseService;
 import lombok.RequiredArgsConstructor;
@@ -36,6 +37,13 @@ public class ExceptionAdvice {
 	protected CommonResult defaultException(HttpServletRequest request, Exception e) {
 		// 예외 처리의 메시지를 MessageSource에서 가져오도록 수정
 		return responseService.getFailResult(Integer.valueOf(getMessage("unKnown.code")), getMessage("unKnown.msg"));
+	}
+
+	@ExceptionHandler(CResourceNotExistException.class)
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	public CommonResult resourceNotExistException(HttpServletRequest request, CResourceNotExistException e) {
+		return responseService.getFailResult(Integer.valueOf(getMessage("resourceNotExist.code")),
+				getMessage("resourceNotExist.msg"));
 	}
 
 	// code정보에 해당하는 메시지를 조회합니다.

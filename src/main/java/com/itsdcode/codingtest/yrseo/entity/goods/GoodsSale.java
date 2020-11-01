@@ -3,12 +3,14 @@ package com.itsdcode.codingtest.yrseo.entity.goods;
 import com.itsdcode.codingtest.yrseo.entity.common.CommonDateEntity;
 import com.itsdcode.codingtest.yrseo.enums.GoodsSaleShapeCl;
 import com.itsdcode.codingtest.yrseo.enums.GoodsSaleShapeClConverter;
+import com.itsdcode.codingtest.yrseo.enums.MasterGoodsYn;
 import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "GOODS_SALE")
@@ -28,7 +30,7 @@ public class GoodsSale extends CommonDateEntity {
     private String goodsSaleNm;
 
     @Column(name = "GOODS_SALE_PRICE")
-    private String goodsSalePrice;
+    private Integer goodsSalePrice;
 
     @OneToMany(mappedBy = "goods")
     private List<GoodsSaleShape> goodsSaleShapes = new ArrayList<GoodsSaleShape>();
@@ -52,11 +54,11 @@ public class GoodsSale extends CommonDateEntity {
         this.goodsSaleNm = goodsSaleNm;
     }
 
-    public String getGoodsSalePrice() {
+    public Integer getGoodsSalePrice() {
         return goodsSalePrice;
     }
 
-    public void setGoodsSalePrice(String goodsSalePrice) {
+    public void setGoodsSalePrice(Integer goodsSalePrice) {
         this.goodsSalePrice = goodsSalePrice;
     }
 
@@ -88,5 +90,40 @@ public class GoodsSale extends CommonDateEntity {
     @Override
     public int hashCode() {
         return Objects.hash(goodsSaleSeq, goodsSaleShapeCl);
+    }
+
+    public void makeGoodsSaleNm() {
+        StringBuilder sb = new StringBuilder(this.goodsSaleShapes.stream().map(GoodsSaleShape::getGoods).map(Goods::getGoodsNm).collect(Collectors.joining("+")));
+        if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.BUNDLE)){
+            sb.append("(").append("묶음상품").append(")");
+        }else if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.ONE_PLUS_ONE)){
+            sb.append("(").append("1+1").append(")");
+        }else if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.OPTION)){
+            sb.append("(").append("옵션상품").append(")");
+        }
+        this.goodsSaleNm = sb.toString();
+    }
+
+    public void makePrice() {
+        Integer goodsSalePrice = 0;
+        for(GoodsSaleShape gs : this.goodsSaleShapes){
+            if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.BUNDLE)){
+                goodsSalePrice += (gs.getGoods().getGoodsPrice()-(gs.getGoods().getGoodsPrice()*(gs.getDiscntRt()/100)));
+                System.out.println(goodsSalePrice);
+            }else if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.ONE_PLUS_ONE)){
+                if(gs.getMasterGoodsYn().equals(MasterGoodsYn.YES)) {
+                    goodsSalePrice = gs.getGoods().getGoodsPrice()-(gs.getGoods().getGoodsPrice()*(gs.getDiscntRt()/100));
+                }
+            }else if(this.goodsSaleShapeCl.equals(GoodsSaleShapeCl.OPTION)){
+                if(gs.getMasterGoodsYn().equals(MasterGoodsYn.YES)) {
+                    goodsSalePrice = gs.getGoods().getGoodsPrice()-(gs.getGoods().getGoodsPrice()*(gs.getDiscntRt()/100));
+                }
+            }else{
+                if(gs.getMasterGoodsYn().equals(MasterGoodsYn.YES)) {
+                    goodsSalePrice = gs.getGoods().getGoodsPrice()-(gs.getGoods().getGoodsPrice()*(gs.getDiscntRt()/100));
+                }
+            }
+        }
+        this.goodsSalePrice = goodsSalePrice;
     }
 }
