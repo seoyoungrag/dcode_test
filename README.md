@@ -4,8 +4,9 @@
 ### 2. spring.profiles.active가 값이 없거나 dev인 경우 H2 DB로 실행, prod일 경우 mariadb 사용
 #### mariadb는 별도 서버 구축 후, application-prod.yml에서 접속정보 수정해야함.
 ### 3. 서버 실행 후 http://{host}:{port}/swagger-ui.html 에서 API html 문서로 확인 가능
-#### 3-1. 상품 리스트 조회 http://{host}:{port}/v1/goodsSale
-#### 3-2. 상품 상세 조회  http://{host}:{port}/v1/goodsSale/{goodsSaleSeq}
+#### 3-1. 기본값, dev, prod 모두 80번 포트 사용합니다.
+#### 3-2. 상품 리스트 조회 http://{host}:{port}/v1/goodsSale
+#### 3-3. 상품 상세 조회  http://{host}:{port}/v1/goodsSale/{goodsSaleSeq}
 
 ## 프로젝트 진행 과정 요약
 
