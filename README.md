@@ -44,4 +44,8 @@
 ### 클래스다이어그램 문서
 ![classdiagram](https://user-images.githubusercontent.com/9579667/97805775-7c8c2500-1c9b-11eb-84df-db02d52107d9.jpg)
 
+### API 명세 문서
+![api_desc_1](https://user-images.githubusercontent.com/9579667/97807747-f2958980-1ca5-11eb-9409-a2161355e7ba.jpg)
+![api_desc_2](https://user-images.githubusercontent.com/9579667/97807750-f4f7e380-1ca5-11eb-8786-1f8406b2cb2c.jpg)
+![api_desc_3](https://user-images.githubusercontent.com/9579667/97807752-f75a3d80-1ca5-11eb-9272-d78df663c76f.jpg)
 
