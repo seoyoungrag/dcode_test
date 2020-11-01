@@ -32,3 +32,12 @@
 #### 5-1. 한 상품판매형태가 복합적으로 표현되어야 할 경우, 상품판매 엔터티와 상품판매형태 엔터티를 결합하면 된다.
 #### 5-2. 상품판매형테를 데이터 모델링의 서브타입모델과 oop의 상속관계로 표현하면 더 확장이 용이하다.
 #### 5-3. 언급되지 않은 재고 관리, 사용자 정보 등에 대한 확장 작성
+
+### 데이터 모델링 문서
+![data_standard_1](https://user-images.githubusercontent.com/9579667/97800993-ef39d800-1c7c-11eb-8520-563c8f229627.jpg)
+![data_standard_2](https://user-images.githubusercontent.com/9579667/97800994-f06b0500-1c7c-11eb-92ce-32c649f53541.jpg)
+![data_standard_3](https://user-images.githubusercontent.com/9579667/97800996-f1039b80-1c7c-11eb-9c6c-9078bd57a2d2.jpg)
+![data_standard_4](https://user-images.githubusercontent.com/9579667/97800997-f1039b80-1c7c-11eb-8d81-9f3f5d6298cb.jpg)
+![logical_erd](https://user-images.githubusercontent.com/9579667/97800999-f19c3200-1c7c-11eb-975e-9f6b371101fe.png)
+![physical_erd](https://user-images.githubusercontent.com/9579667/97801001-f19c3200-1c7c-11eb-8373-cfbdae68ed2d.png)
+
