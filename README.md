@@ -42,6 +42,6 @@
 ![physical_erd](https://user-images.githubusercontent.com/9579667/97805294-8a8c7680-1c98-11eb-9e97-da5bb1831f2a.png)
 
 ### 클래스다이어그램 문서
-![classdiagram](https://user-images.githubusercontent.com/9579667/97805296-8b250d00-1c98-11eb-85de-1c33de218327.jpg)
+![classdiagram](https://user-images.githubusercontent.com/9579667/97805775-7c8c2500-1c9b-11eb-84df-db02d52107d9.jpg)
 
 
